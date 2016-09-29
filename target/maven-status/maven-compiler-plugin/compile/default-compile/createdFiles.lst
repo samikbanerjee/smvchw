@@ -1,0 +1,4 @@
+com\mvc\controller\RegistrationController.class
+com\mvc\controller\PersonController.class
+com\mvc\controller\HW.class
+com\mvc\model\Person.class
