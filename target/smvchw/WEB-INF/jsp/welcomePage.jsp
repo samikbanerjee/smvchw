@@ -18,6 +18,10 @@
 			</c:forEach>
 		</ul>
 	</div>
+	
+	<div class="container" style="text-align: center">
+	${city}
+	</div>
 	<!-- Footer -->
 	<jsp:include page="footer.jsp"></jsp:include>
 
