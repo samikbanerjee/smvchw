@@ -47,6 +47,7 @@
             <li><a href="wel">Welcome</a></li>
             <li><a href="pers">Person</a></li>
             <li><a href="register">Registration</a></li>
+            <li><a href="city">City</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
