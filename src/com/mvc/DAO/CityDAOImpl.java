@@ -1,5 +1,7 @@
 package com.mvc.DAO;
 
+import java.util.List;
+
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -64,5 +66,17 @@ public class CityDAOImpl
 
 		return jdbcTemplate.queryForObject(SQL, new Object[]
 		{ id }, new CityModelMapper());
+	}
+
+	/**
+	 * @param countryCode
+	 * @return List of Cities
+	 */
+	public List<CityModel> getCitiesByCountryCd(final String countryCode)
+	{
+		final String SQL = "SELECT ID, Name, CountryCode, District, Population  FROM city  WHERE CountryCode=?";
+
+		return jdbcTemplate.query(SQL, new Object[]
+		{ countryCode }, new CityModelMapper());
 	}
 }

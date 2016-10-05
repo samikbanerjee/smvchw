@@ -1,4 +1,5 @@
 com\mvc\controller\RegistrationController.class
+com\mvc\controller\SearchController.class
 com\mvc\DAO\CityDAOImpl.class
 com\mvc\controller\PersonController.class
 com\mvc\controller\HW.class
