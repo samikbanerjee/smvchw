@@ -43,28 +43,20 @@ public class CityController
 		this.cityDao = cityDao;
 	}
 
-	//	/**
-	//	 * @param model
-	//	 * @return City Display
-	//	 */
-	//	@RequestMapping(value = "/city", method = RequestMethod.GET)
-	//	public String cityPage(final ModelMap model)
-	//	{
-	//		final CityModel city = cityDao.getCityById(5);
-	//		model.addAttribute("city", city);
-	//		return "cityPage";
-	//	}
 
 	/**
-	 * @param pSearchTerm
+	 * @param countryCode
 	 * @param model
 	 * @return City Display
 	 */
 	@RequestMapping(value = "/city", method = RequestMethod.GET)
-	public String cityPage(@RequestParam(value = "searchTerm", required = false) final String pSearchTerm, final ModelMap model)
+	public String cityPage(@RequestParam(value = "countryCode", required = false) final String countryCode, final ModelMap model)
 	{
-		final List<CityModel> cities = cityDao.getCitiesByCountryCd(pSearchTerm);
+		final List<String> countryCodes = cityDao.getCountryCodes();
+		final List<CityModel> cities = cityDao.getCitiesByCountryCd(countryCode);
+		model.addAttribute("countryCodes", countryCodes);
 		model.addAttribute("cities", cities);
 		return "cityPage";
 	}
+
 }

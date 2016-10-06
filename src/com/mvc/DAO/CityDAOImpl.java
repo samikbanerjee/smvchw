@@ -79,4 +79,14 @@ public class CityDAOImpl
 		return jdbcTemplate.query(SQL, new Object[]
 		{ countryCode }, new CityModelMapper());
 	}
+
+	/**
+	 * @return List of country codes
+	 */
+	public List<String> getCountryCodes()
+	{
+		final String SQL = "select distinct(CountryCode) from city";
+		return jdbcTemplate.queryForList(SQL, String.class);
+	}
+
 }

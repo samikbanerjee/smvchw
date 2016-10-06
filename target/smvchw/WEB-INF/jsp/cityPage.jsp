@@ -19,20 +19,37 @@
 	</c:if>
 	
 	<div class="container">
-	<c:forEach items="${cities}" var="ct">
-		<div class="panel panel-success">
-			<div class="panel-heading">
-				<h3 class="panel-title">${ct.name}</h3>
-			</div>
-			<div class="panel-body">
-				<div> <strong>Id: </strong> ${ct.iD} </div>
-				<div> <strong>Population: </strong> ${ct.population} </div>
-				<div> <strong>Country (code): </strong> ${ct.countryCode} </div>
-				<div> <strong>District: </strong> ${ct.district} </div>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="panel panel-info">
+				<div class="panel-heading"><h3 class="panel-title">Country Codes</h3></div>
+					<div class="panel-body">
+						<c:forEach items="${countryCodes}" var="countryCode">
+							<a href="?countryCode=${countryCode}">${countryCode}</a>
+							<br>
+						</c:forEach>
+					</div>
 			</div>
 		</div>
-		<br>
-		</c:forEach>
+	
+		<div class="col-md-8">
+				<c:forEach items="${cities}" var="ct">
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<h3 class="panel-title">${ct.name}</h3>
+						</div>
+						<div class="panel-body">
+							<div> <strong>Id: </strong> ${ct.iD} </div>
+							<div> <strong>Population: </strong> ${ct.population} </div>
+							<div> <strong>Country (code): </strong> ${ct.countryCode} </div>
+							<div> <strong>District: </strong> ${ct.district} </div>
+						</div>
+					</div>
+				<br>
+			</c:forEach>
+		</div>
+	
+	</div>
 	</div>
 	
 	<!-- Footer -->
