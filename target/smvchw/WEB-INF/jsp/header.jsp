@@ -48,6 +48,7 @@
             <li><a href="pers">Person</a></li>
             <li><a href="register">Registration</a></li>
             <li><a href="city">City</a></li>
+            <li><a href="citySearch">Search City</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

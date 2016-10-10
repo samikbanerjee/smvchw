@@ -2,10 +2,6 @@ package com.mvc.DAO;
 
 import java.util.List;
 
-import javax.sql.DataSource;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
 import com.mvc.model.CityModel;
@@ -15,46 +11,8 @@ import com.mvc.model.CityModel;
  * City Data Access Object
  */
 @Component
-public class CityDAOImpl
+public class CityDAOImpl extends EntityDAO
 {
-	@Autowired
-	DataSource dataSource;
-	@Autowired
-	JdbcTemplate jdbcTemplate;
-
-	/**
-	 * @return the dataSource
-	 */
-	public DataSource getDataSource()
-	{
-		return dataSource;
-	}
-
-	/**
-	 * @param dataSource
-	 *           the dataSource to set
-	 */
-	public void setDataSource(final DataSource dataSource)
-	{
-		this.dataSource = dataSource;
-	}
-
-	/**
-	 * @return the jdbcTemplate
-	 */
-	public JdbcTemplate getJdbcTemplate()
-	{
-		return jdbcTemplate;
-	}
-
-	/**
-	 * @param jdbcTemplate
-	 *           the jdbcTemplate to set
-	 */
-	public void setJdbcTemplate(final JdbcTemplate jdbcTemplate)
-	{
-		this.jdbcTemplate = jdbcTemplate;
-	}
 
 	/**
 	 * @param id
@@ -89,4 +47,63 @@ public class CityDAOImpl
 		return jdbcTemplate.queryForList(SQL, String.class);
 	}
 
+	/**
+	 * @param city
+	 * @return Entry created - message
+	 */
+	public String createCity(final CityModel city)
+	{
+		final String SQL = "INSERT INTO city (ID, Name, CountryCode, District, Population) VALUES (?,?,?,?,?)";
+		final int i = jdbcTemplate.update(SQL, new Object[]
+		{ city.getiD(), city.getName(), city.getCountryCode(), city.getDistrict(), city.getPopulation() });
+		if (i == 1)
+		{
+			return "Entry created successfully";
+		}
+		else
+		{
+			return "Unable to create Entry";
+		}
+	}
+
+	/**
+	 * @param city
+	 * @return Entries updated - message
+	 */
+	public String updateCity(final CityModel city)
+	{
+		final String SQL = "UPDATE city SET NAME=?, CountryCode=?, District=?, Population=? WHERE ID=?";
+		final int i = jdbcTemplate.update(SQL, new Object[]
+		{ city.getName(), city.getCountryCode(), city.getDistrict(), city.getPopulation(), city.getiD() });
+
+		if (i == 0)
+		{
+			return "Could not find entries to update";
+		}
+		else
+		{
+			return "Updated " + i + " entries";
+		}
+
+	}
+
+	/**
+	 * @param id
+	 * @return Entries Deleted - message
+	 */
+	public String deleteCityById(final int id)
+	{
+		final String SQL = "DELETE FROM city WHERE ID=?";
+		final int i = jdbcTemplate.update(SQL, new Object[]
+		{ id });
+		if (i == 0)
+		{
+			return "Could not find entries to delete";
+		}
+		else
+		{
+			return "Deleted " + i + " entries";
+		}
+
+	}
 }

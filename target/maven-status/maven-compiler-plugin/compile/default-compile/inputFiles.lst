@@ -2,7 +2,9 @@ E:\eclipse\workspace\SMVCHW\src\com\mvc\model\Person.java
 E:\eclipse\workspace\SMVCHW\src\com\mvc\controller\RegistrationController.java
 E:\eclipse\workspace\SMVCHW\src\com\mvc\model\CityModel.java
 E:\eclipse\workspace\SMVCHW\src\com\mvc\controller\PersonController.java
+E:\eclipse\workspace\SMVCHW\src\com\mvc\DAO\EntityDAO.java
 E:\eclipse\workspace\SMVCHW\src\com\mvc\controller\CityController.java
+E:\eclipse\workspace\SMVCHW\src\com\mvc\controller\CitySearchController.java
 E:\eclipse\workspace\SMVCHW\src\com\mvc\DAO\CityDAOImpl.java
 E:\eclipse\workspace\SMVCHW\src\com\mvc\controller\HW.java
 E:\eclipse\workspace\SMVCHW\src\com\mvc\DAO\CityModelMapper.java

@@ -1,3 +1,4 @@
+com\mvc\controller\CitySearchController.class
 com\mvc\controller\RegistrationController.class
 com\mvc\DAO\CityDAOImpl.class
 com\mvc\controller\PersonController.class
@@ -6,3 +7,4 @@ com\mvc\model\CityModel.class
 com\mvc\controller\CityController.class
 com\mvc\model\Person.class
 com\mvc\DAO\CityModelMapper.class
+com\mvc\DAO\EntityDAO.class
