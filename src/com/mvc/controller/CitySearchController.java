@@ -21,16 +21,6 @@ public class CitySearchController
 	@Autowired
 	CityDAOImpl cityDAO;
 
-	/**
-	 * @param model
-	 * @return City Search Area
-	 */
-	@RequestMapping(method = RequestMethod.GET)
-	public String searchCity(final ModelMap model)
-	{
-		model.addAttribute("city", new CityModel());
-		return "citySearch";
-	}
 
 	/**
 	 * @return the cityDAO
@@ -48,6 +38,18 @@ public class CitySearchController
 	{
 		this.cityDAO = cityDAO;
 	}
+
+	/**
+	 * @param model
+	 * @return City Search Area
+	 */
+	@RequestMapping(method = RequestMethod.GET)
+	public String searchCity(final ModelMap model)
+	{
+		model.addAttribute("city", new CityModel());
+		return "citySearch";
+	}
+
 
 	/**
 	 * @param city

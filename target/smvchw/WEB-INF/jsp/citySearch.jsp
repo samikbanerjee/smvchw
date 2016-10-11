@@ -15,8 +15,9 @@
 	<jsp:include page="header.jsp"></jsp:include>
 	<!-- BODY -->
 	
-	<!-- Search Area -->
+	
 	<div class="container">
+	<!-- Search Area -->
 	<div class="panel panel-info">
 		<div class="panel-heading"><h3 class="panel-title">Search By City Id</h3></div>
 		<div class="panel-body">

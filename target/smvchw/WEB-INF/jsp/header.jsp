@@ -49,6 +49,7 @@
             <li><a href="register">Registration</a></li>
             <li><a href="city">City</a></li>
             <li><a href="citySearch">Search City</a></li>
+            <li><a href="test">Test Page</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
