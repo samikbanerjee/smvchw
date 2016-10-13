@@ -7,7 +7,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title>Registration Form</title>
+	<title>Search City</title>
 </head>
 <body>
 
@@ -35,10 +35,15 @@
 	<c:if test="${not empty ct}">
 	<div class="panel panel-success">
 		<div class="panel-heading">
-			<h3 class="panel-title">${ct.name}</h3>
+			<div class="panel-title pull-left">City ID: ${ct.iD}</div>
+			<div class="panel-title pull-right">
+				<a href="editcity?cityId=${ct.iD}" title="Edit City"><span class="glyphicon glyphicon-pencil"></span></a>
+				<a href="removecity?cityId=${ct.iD}" title="Remove City"><span class="glyphicon glyphicon-remove"></span></a>
+			</div>	
+			<div class="clearfix"></div>
 		</div>
 		<div class="panel-body">
-							<div> <strong>Id: </strong> ${ct.iD} </div>
+							<div> <strong>Name: </strong> ${ct.name} </div>
 							<div> <strong>Population: </strong> ${ct.population} </div>
 							<div> <strong>Country (code): </strong> ${ct.countryCode} </div>
 							<div> <strong>District: </strong> ${ct.district} </div>
