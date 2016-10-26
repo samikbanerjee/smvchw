@@ -1,11 +1,10 @@
 package com.mvc.controller;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 
 /**
@@ -27,14 +26,14 @@ public class TestController
 	}
 
 	/**
-	 * @param request
+	 * @param val
 	 * @param model
 	 * @return Test Page POST
 	 */
 	@RequestMapping(method = RequestMethod.POST)
-	public String testPagePost(final HttpServletRequest request, final ModelMap model)
+	public String testPagePost(@RequestParam("textInput") final String val, final ModelMap model)
 	{
-		final String val = request.getParameter("textInput");
+		//final String val = request.getParameter("textInput");
 		model.addAttribute("val", val);
 		return "testPage";
 	}

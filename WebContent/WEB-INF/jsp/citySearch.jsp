@@ -37,6 +37,7 @@
 		<div class="panel-heading">
 			<div class="panel-title pull-left">City ID: ${ct.iD}</div>
 			<div class="panel-title pull-right">
+
 				<a href="editcity?cityId=${ct.iD}" title="Edit City"><span class="glyphicon glyphicon-pencil"></span></a>
 				<a href="removecity?cityId=${ct.iD}" title="Remove City"><span class="glyphicon glyphicon-remove"></span></a>
 			</div>	
