@@ -1,11 +1,16 @@
 package com.mvc.model;
 
+import com.opencsv.bean.CsvBind;
+
+
 /**
  *
  */
 public class Person
 {
+	@CsvBind
 	private String fName;
+	@CsvBind
 	private String lName;
 
 	/**

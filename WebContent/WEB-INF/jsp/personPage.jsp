@@ -10,6 +10,7 @@
 	<jsp:include page="header.jsp"></jsp:include>
 	
 	<!-- Body -->
+	<h1>${msg}</h1>
 	<ul>
 		<c:forEach items="${personList}" var="person">
 				<li>FN : ${person.fName} ; LN : ${person.lName}</li>

@@ -5,6 +5,7 @@ com\mvc\controller\HW.class
 com\mvc\model\CityModel.class
 com\mvc\controller\CityController.class
 com\mvc\DAO\EntityDAO.class
+com\mvc\model\ToolBox.class
 com\mvc\controller\ImageController.class
 com\mvc\controller\RegistrationController.class
 com\mvc\controller\CityEditController.class
