@@ -40,16 +40,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="wel">SMVCHW</a>
+          <a class="navbar-brand" href="wel">Pragiti</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="wel">Welcome</a></li>
-            <li><a href="pers">Person</a></li>
-            <li><a href="register">Registration</a></li>
-            <li><a href="city">City</a></li>
-            <li><a href="citySearch">Search City</a></li>
-            <li><a href="test">Test Page</a></li>
+            <spring:url value="/employees" var="emplList"/>
+            <li><a href="${emplList}">Employee List</a></li>
+            <spring:url value="/employees/add" var="emplAddUrl"/>
+            <li><a href="${emplAddUrl}">Add an Employee</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
